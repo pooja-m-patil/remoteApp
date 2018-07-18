@@ -11,7 +11,7 @@ function sendAvailability() {
       method: 'POST',
       url: 'http://192.168.31.133:3000/remoteApp',
       headers: headers,
-      body: JSON.stringify({ 'deviceId': "d1111" })
+      body: JSON.stringify({ 'deviceId': "d5555" })
   };
   
   console.log("Sending Availability");
@@ -30,7 +30,7 @@ function sendAvailability() {
           }
           var config = {
             "org" : 'tgacg8',
-            "id" : 'd1111',
+            "id" : 'd5555',
             "type" : 'iotbootcamp',
             "auth-method" : "token",
             "auth-token" : temp.Authentication_Token
@@ -43,7 +43,7 @@ function sendAvailability() {
 
         function deviceData(){
           var d = new Date();
-           deviceClient.publish("status","json",'{"d" : { "deviceId" : "d1111" , "usage" :'+ Math.round(Math.random()*100)+', "time":'+JSON.stringify(d.toISOString())+'}}');
+           deviceClient.publish("status","json",'{"d" : { "deviceId" : "d5555" , "usage" :'+ Math.round(Math.random()*100)+', "time":'+JSON.stringify(d.toISOString())+'}}');
           }
         
           var devData=setInterval(deviceData,5000);
